@@ -19,7 +19,8 @@ defmodule EctoTsvector.MixProject do
 
   defp deps do
     [
-      {:ecto, "~> 3.12"}
+      {:ecto, "~> 3.12"},
+      {:postgrex_text_ext, "~> 0.1.0"}
     ]
   end
 end
