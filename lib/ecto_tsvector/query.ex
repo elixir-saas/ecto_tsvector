@@ -12,6 +12,16 @@ defmodule EctoTsvector.Query do
       * `:vector_field` - Set the field name to use for the search vector, defaults to `:search_vector`.
       * `:language_field` - Set the field name to use for the search language, defaults to `:search_language`.
 
+  ## Examples
+
+      def search_workspace_messages(workspace, search_term) do
+        Message
+        |> where([m], m.workspace_id == ^workspace.id)
+        |> EctoTsvector.Query.tsvector_search_query(search_term)
+        |> limit(10)
+        |> Repo.all()
+      end
+
   """
   @spec tsvector_search_query(Ecto.Query.t(), String.t()) :: Ecto.Query.t()
   @spec tsvector_search_query(Ecto.Query.t(), String.t(), Keyword.t()) :: Ecto.Query.t()

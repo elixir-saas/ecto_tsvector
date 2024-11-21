@@ -4,6 +4,6 @@ Postgrex.Types.define(EctoTsvector.PostgrexTypes, [PostgrexTextExt])
 
 defmodule EctoTsvector do
   @moduledoc """
-  Documentation for `EctoTsvector`.
+  Add vector search with Ecto to your existing Postgres database.
   """
 end
