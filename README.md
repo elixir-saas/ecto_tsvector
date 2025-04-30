@@ -1,11 +1,10 @@
 # EctoTsvector
 
-**TODO: Add description**
+Add vector search to your application with Ecto, [tsvector](https://www.postgresql.org/docs/current/datatype-textsearch.html), and Postgres.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ecto_tsvector` to your list of dependencies in `mix.exs`:
+Install by adding `ecto_tsvector` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -14,6 +13,8 @@ def deps do
   ]
 end
 ```
+
+Full documentation at <https://hexdocs.pm/ecto_tsvector>.
 
 This library uses the `regconfig` type in Postgres.
 Add support for this type by adding the following config for your repo:
